@@ -1,0 +1,15 @@
+version: '2'
+services:
+  babypwn:
+    image: babypwn
+    build: .
+    restart: always
+    environment:
+      - TERM=xterm
+    ports:
+      - '1337:1337'
+    volumes:
+      - ./chall:/home/babypwn/chall:ro
+      - ./flag.txt:/home/babypwn/flag.txt:ro
+      - ./xinetd:/etc/xinetd.d/babypwn:ro
+      - ./startchall.sh:/home/babypwn/startchall:ro
