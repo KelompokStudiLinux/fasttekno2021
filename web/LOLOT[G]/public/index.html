@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>LOLOT[G]</title>
+  </head>
+  <body>
+    <center>
+      <img id="album" src="?album=meong-garong.jpg" style="display: block; margin-bottom: .8rem;" />
+      <button data-href="?album=meong-garong.jpg">Meong Garong</button>
+      <button data-href="?album=nyujuh-langit.jpg">Nyujuh Langit</button>
+      <button data-href="?album=gumine-mangkin.jpg">Gumine Mangkin</button>
+    </center>
+
+    <script lang="javascript">
+      document.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (e.target.tagName == 'BUTTON') {
+          document.querySelector('#album').setAttribute('src', e.target.dataset.href);
+        }
+      });
+    </script>
+  </body>
+</html>
