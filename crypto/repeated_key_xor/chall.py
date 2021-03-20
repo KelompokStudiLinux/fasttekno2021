@@ -3,12 +3,12 @@ import os
 
 def enc(plain,key):
     cipher = ''
-    for p in plain:
-        cipher += chr((p ^ key) + 3)
+    for i in range(len(plain)):
+        cipher += chr(plain[i] ^ key[i%len(key)])
     
     return b64encode(cipher.encode('latin1'))
 
-key = ord(os.urandom(1))
+key = os.urandom(9)
 flag = open("flag.txt","rb").read()
 cipher = enc(flag,key)
 
