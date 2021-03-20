@@ -1,5 +1,5 @@
 from Crypto.Util.number import long_to_bytes
-import owiener
+import owiener      # https://github.com/orisano/owiener
 
 f = open("pp.txt").read()
 exec(f)     #n,pp,c
