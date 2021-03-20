@@ -6,5 +6,5 @@ exec(f)     #n,pp,c
 
 d = owiener.attack(pp,n)
 m = pow(c,d,n)
-m = long_to_bytes(m)
-print(m)
+flag = long_to_bytes(m)
+print(flag)
