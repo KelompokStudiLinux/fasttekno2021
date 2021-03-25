@@ -1,26 +1,26 @@
 version: '3'
 
 networks:
-    web_pramayasa:
+    ${NAME}:
 
 services:
     nginx:
         image: nginx:stable-alpine
-        container_name: web_pramayasa-nginx
+        container_name: ${NAME}-nginx
         ports:
-            - "80:80"
+            - "${PORT}:80"
         volumes:
             - .:/var/www/html
             - ./nginx.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - php
         networks:
-            - web_pramayasa
+            - ${NAME}
 
     php:
         build: .
-        container_name: web_pramayasa-php
+        container_name: ${NAME}-php
         volumes:
             - .:/var/www/html
         networks:
-            - web_pramayasa
+            - ${NAME}
