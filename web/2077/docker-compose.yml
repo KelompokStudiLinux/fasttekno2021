@@ -34,22 +34,22 @@ services:
         networks:
             - web_2077
 
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: ${APP_NAME}-phpmyadmin
-        environment:
-            PMA_HOST: mysql
-            PMA_PORT: 3306
-            PMA_DB_SERVER: mysql
-            PMA_USER: root
-            PMA_PASSWORD: a2FzZGoxMjk4N2R5NzhuZHNpamZoamhld2lmdTg
-            restart: always
-        ports:
-            - "8081:80"
-        volumes:
-            - dbdata:/var/lib/mysql
-        networks:
-            - web_2077
+    # phpmyadmin:
+    #     image: phpmyadmin/phpmyadmin
+    #     container_name: ${APP_NAME}-phpmyadmin
+    #     environment:
+    #         PMA_HOST: mysql
+    #         PMA_PORT: 3306
+    #         PMA_DB_SERVER: mysql
+    #         PMA_USER: root
+    #         PMA_PASSWORD: a2FzZGoxMjk4N2R5NzhuZHNpamZoamhld2lmdTg
+    #         restart: always
+    #     ports:
+    #         - "8081:80"
+    #     volumes:
+    #         - dbdata:/var/lib/mysql
+    #     networks:
+    #         - web_2077
 
 volumes: 
     dbdata: {} 
