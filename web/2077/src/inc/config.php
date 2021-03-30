@@ -1,10 +1,10 @@
 <?php
 
-$host = 'mysql';
+$host = 'localhost';
 $db   = 'web_2077';
 $user = 's3cr3T_Us3r';
 $pass = 's3cr3t_p4s5w0rd';
-$port = "3306";
+$port = "2087";
 $charset = 'utf8mb4';
 
 $options = [

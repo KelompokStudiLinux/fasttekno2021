@@ -7,26 +7,26 @@ services:
     php:
         build: .
         container_name: ${APP_NAME}-php
+        restart: always
         environment: 
-            APP_ENV: development
+            APP_ENV: production
         ports:
             - "${PORT}:80"
         volumes:
             - ./src:/var/www/html:ro
             - ./hint2.txt:/hint2.txt:ro
-            - ./custom-php.ini:/usr/local/etc/php/conf.d/custom.php.ini:ro
         networks:
             - web_2077
 
     mysql:
         image: mysql:5.7.22
         container_name: ${APP_NAME}-mysql
+        restart: always
         tty: true
         ports: 
             - "2087:3306"
         volumes:
             - dbdata:/var/lib/mysql
-            - ./user.sql:/docker-entrypoint-initdb.d/user.sql:ro
         environment:
             MYSQL_DATABASE: ${APP_NAME}
             MYSQL_USER: s3cr3T_Us3r
@@ -34,22 +34,6 @@ services:
             MYSQL_ROOT_PASSWORD: a2FzZGoxMjk4N2R5NzhuZHNpamZoamhld2lmdTg
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
-        networks:
-            - web_2077
-
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: ${APP_NAME}-phpmyadmin
-        environment:
-            PMA_HOST: mysql
-            PMA_PORT: 3306
-            PMA_DB_SERVER: mysql
-            PMA_USER: root
-            PMA_PASSWORD: a2FzZGoxMjk4N2R5NzhuZHNpamZoamhld2lmdTg
-        ports:
-            - "8081:80"
-        volumes:
-            - dbdata:/var/lib/mysql
         networks:
             - web_2077
 

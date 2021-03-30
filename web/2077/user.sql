@@ -39,7 +39,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `username`, `password`) VALUES
-(1, 'Flag 2', 'admin', '_ny4ata_kat4mu_a2VxaW5n}');
+(1, 'Flag 2', 'admin', '_ny4ata_kat4mu_a2VxaW5nIGl0dSBueWF0YQ}');
 
 --
 -- Indexes for dumped tables
