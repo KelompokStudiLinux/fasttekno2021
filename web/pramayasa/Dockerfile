@@ -2,5 +2,6 @@ FROM php:fpm-alpine
 
 COPY flag.txt /flag.txt
 
-RUN rm /usr/bin/nc
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 RUN rm -rf /tmp/*

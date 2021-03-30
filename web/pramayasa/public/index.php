@@ -74,7 +74,6 @@
       <section id="about">
          <div class="row section-intro">
             <div class="col-twelve">
-
                <h5>About</h5>
                <h1>Let me introduce myself.</h1>
 
