@@ -3,7 +3,7 @@
 global $pdo;
 
 if (empty($_SESSION['name'])) {
-    echo "<script>window.location.replace('/?page=login.php')</script>";
+    header('Location: ?page=login.php');
     die;
 }
 

@@ -4,7 +4,8 @@ if ($_POST) {
 	$name = trim($_POST['name']);
 
 	$_SESSION['name'] = $name;
-	echo '<script>window.location.replace("?page=dashboard.php")</script>';
+	header('Location: ?page=dashboard.php');
+	die;
 }
 
 ?>
