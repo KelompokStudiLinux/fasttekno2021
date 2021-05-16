@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 int main() {
-  char f = open("./flag.txt", 0);
+  int fd = open("/flag.txt", 0);
 
   setuid(getuid());
 
