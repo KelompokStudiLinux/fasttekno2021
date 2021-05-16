@@ -1,13 +1,10 @@
 #include <fcntl.h>
-#include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int main() {
   int fd = open("/flag.txt", 0);
-
   setuid(getuid());
-
-  char *args[] = {"sh", 0};
-  execvp("/bin/sh", args);
+  system("/bin/sh");
   return 0;
 }
