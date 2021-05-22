@@ -6,7 +6,8 @@ const app = express();
 
 app.get("/", function (req, res) {
   if (req.query.album) {
-    res.write(fs.readFileSync("./public/assets/" + req.query.album));
+    const q = req.query.album.replace(/\.\.\//g, '');
+    res.write(fs.readFileSync("./public/assets/" + q));
     return res.end();
   }
 
@@ -14,4 +15,4 @@ app.get("/", function (req, res) {
   res.end();
 });
 
-app.listen(port, () => console.log("Listening " + port));
+app.listen(port);

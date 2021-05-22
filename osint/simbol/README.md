@@ -2,5 +2,5 @@ konon ada 2 artist yang sangat terkenal yang menggunakan simbol ini pada karya m
 
 file: simbol.jpg
 
-format flag: FastTekno{nama_simbol_artist_1_artist_2}
+format flag: FastTekno{artist_1_artist_2}
 note: flag menggunakan lowercase dan spasi diganti dengan _
