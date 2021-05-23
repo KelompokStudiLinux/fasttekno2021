@@ -2,9 +2,8 @@
 
 export $(grep -v '^#' .env | xargs)
 
-PHP_INI_DIR="/usr/local/etc/php"
-
-docker-compose up -d --build --force-recreate
-docker-compose exec php cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+docker build . -t pramayasa
+[[ `docker ps -qf name=${APP_NAME}` ]] && docker stop ${APP_NAME}
+docker run -tid --rm --name ${APP_NAME} -p ${PORT}:80 pramayasa
 
 echo "Setup ${APP_NAME} on port ${PORT}"

@@ -1,4 +1,4 @@
-from Crypto.Util.number import GCD, getPrime, bytes_to_long, long_to_bytes, inverse
+from Crypto.Util.number import GCD, getPrime, bytes_to_long
 from random import getrandbits
 
 p = getPrime(1024)

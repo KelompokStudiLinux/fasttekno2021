@@ -1,10 +1,10 @@
 <?php
 
-$host = 'localhost';
-$db   = 'web_2077';
-$user = 's3cr3T_Us3r';
-$pass = 's3cr3t_p4s5w0rd';
-$port = "2087";
+$host = getenv('DB_HOST');
+$db   = getenv('DB_DATABASE');
+$user = getenv('DB_USERNAME');
+$pass = getenv('DB_PASSWORD');
+$port = getenv('DB_PORT');
 $charset = 'utf8mb4';
 
 $options = [

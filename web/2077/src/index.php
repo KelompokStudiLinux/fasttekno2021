@@ -4,10 +4,7 @@ if (empty($_GET['page'])) {
   die;
 }
 
-session_save_path('/tmp');
-session_start();
-
-include 'inc/flag1.php'; ?>
+session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
