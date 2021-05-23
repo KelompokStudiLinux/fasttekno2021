@@ -1,14 +1,14 @@
-service warmup 
+service celebrity 
 {
   disable = no
   socket_type = stream
   protocol = tcp
   wait = no
-  user = warmup
+  user = celebrity
   type = UNLISTED
-  port = 1337
+  port = 30202
   bind = 0.0.0.0
-  server = /home/warmup/chall
+  server = /home/celebrity/chall
   per_source = 10
   rlimit_cpu = 20
 }

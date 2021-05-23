@@ -39,6 +39,6 @@ def main():
   encryption(shift)
 
 # dis.dis(main)
-dis.dis(encryption)
+# dis.dis(encryption)
 # dis.dis(shuffle_secret)
-# main()
+main()

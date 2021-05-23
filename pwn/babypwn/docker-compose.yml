@@ -7,7 +7,7 @@ services:
     environment:
       - TERM=xterm
     ports:
-      - '1337:1337'
+      - '30203:30203'
     volumes:
       - ./chall:/home/babypwn/chall:ro
       - ./flag.txt:/home/babypwn/flag.txt:ro

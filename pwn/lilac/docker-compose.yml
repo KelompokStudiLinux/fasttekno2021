@@ -1,0 +1,15 @@
+version: '2'
+services:
+  lilac:
+    image: lilac
+    build: .
+    restart: always
+    environment:
+      - TERM=xterm
+    ports:
+      - '30204:30204'
+    volumes:
+      - ./chall:/home/lilac/chall:ro
+      - ./flag.txt:/home/lilac/flag.txt:ro
+      - ./xinetd:/etc/xinetd.d/lilac:ro
+      - ./startchall.sh:/home/lilac/startchall:ro

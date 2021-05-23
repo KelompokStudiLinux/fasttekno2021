@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mishellia:
+    image: mishellia
+    build: .
+    restart: always
+    environment:
+      - TERM=xterm
+    ports:
+      - '30201:30201'
+    volumes:
+      - ./chall:/home/mishellia/chall:ro
+      - ./flag.txt:/home/mishellia/flag.txt:ro
+      - ./xinetd:/etc/xinetd.d/mishellia:ro
+      - ./startchall.sh:/home/mishellia/startchall:ro

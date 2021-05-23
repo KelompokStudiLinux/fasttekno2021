@@ -1,0 +1,15 @@
+version: '2'
+services:
+  celebrity:
+    image: celebrity
+    build: .
+    restart: always
+    environment:
+      - TERM=xterm
+    ports:
+      - '30202:30202'
+    volumes:
+      - ./chall:/home/celebrity/chall:ro
+      - ./flag.txt:/home/celebrity/flag.txt:ro
+      - ./xinetd:/etc/xinetd.d/celebrity:ro
+      - ./startchall.sh:/home/celebrity/startchall:ro
