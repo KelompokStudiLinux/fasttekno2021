@@ -5,7 +5,7 @@
 ```
 2:55:12 › file chall; checksec chall
 chall: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=d441550632209e2b7eb624470e8892ae13d8c4af, for GNU/Linux 3.2.0, not stripped
-[*] '/home/chao/Documents/FastTekno/pwn/babypwn/chall'
+[*] '/home/chao/Documents/FastTekno/pwn/warmup/chall'
     Arch:     amd64-64-little
     RELRO:    Full RELRO
     Stack:    Canary found
